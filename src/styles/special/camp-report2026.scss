@@ -1,0 +1,1423 @@
+@import url("https://sky-a.asahi.co.jp/css/special/camp-report2020.css");
+
+.l-sns {
+  z-index: 21;
+  top: 512px!important
+}
+.main-contents p + p {
+  margin-top: 0;
+}
+
+.special-movie__wrapper {
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+.special-movie__wrapper.avalable {
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.special-movie__wrapper.avalable:hover {
+  opacity: .5;
+}
+
+.special-movie__visual {
+  position: relative;
+  display: block;
+}
+
+.special-movie__visual::before {
+  content: "";
+  background: url(/img/top/top_youtube.png) center top no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 70px;
+  height: 47px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.special-movie__text {
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+
+.special-movie-modal-ovarlay,
+.c-movie-modal-ovarlay {
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.special-movie-modal-content,
+.c-movie-modal-content {
+  width: 560px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: #fff;
+  position: fixed;
+  display: none;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.special-movie-modal-content__close,
+.c-movie-modal-content__close {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+.special-movie-modal-content__close::before, .special-movie-modal-content__close::after,
+.c-movie-modal-content__close::before,
+.c-movie-modal-content__close::after {
+  content: "";
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 10px;
+  left: 0;
+}
+
+.special-movie-modal-content__close::before,
+.c-movie-modal-content__close::before {
+  transform: rotate(-45deg);
+}
+
+.special-movie-modal-content__close::after,
+.c-movie-modal-content__close::after {
+  transform: rotate(45deg);
+}
+
+.special-movie-modal-content__inner,
+.c-movie-modal-content__inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.special-movie-modal-content__inner > iframe,
+.c-movie-modal-content__inner > iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-commonTag {
+  background: #cc0000;
+  border-radius: 6px;
+  color: #FFF;
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.c-commonProgram + .c-commonProgram {
+  margin-top: 90px;
+}
+
+.c-commonProgram__title {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.c-commonProgram__content {
+  display: flex;
+  margin: 28px 0 0;
+}
+
+.c-commonProgram__image {
+  width: 560px;
+  &--large {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.c-commonProgram__detail {
+  flex: 1;
+  padding: 0 0 0 30px;
+}
+
+.c-commonProgram__name {
+  color: #cc0000;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8px 0 14px;
+}
+
+.c-commonProgram__text {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.c-commonProgram__text + .c-commonProgram__text {
+  margin-top: 25px;
+}
+
+.c-commonProgram__dl {
+  display: flex;
+}
+
+.c-commonProgram__dt {
+  white-space: nowrap;
+}
+
+.c-commonProgram__dd {
+  flex: 1;
+}
+
+.c-table-usage {
+  margin: 18px 0 0;
+}
+
+.c-table-usage__live {
+  color: red;
+}
+
+.c-table-usage__video {
+  color: #5153ff;
+}
+
+.c-parenthesis-title {
+  align-items: center;
+  background: inherit;
+  box-sizing: border-box;
+  color: #999;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 74px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 406px;
+}
+
+.c-parenthesis-title::before, .c-parenthesis-title::after {
+  content: "";
+  position: absolute;
+}
+
+.c-parenthesis-title::before {
+  border: 6px solid #FFF;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.c-parenthesis-title::after {
+  background: inherit;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  width: calc(100% - 30px);
+}
+
+.c-parenthesit-title__text {
+  position: relative;
+  z-index: 1;
+}
+
+.c-movieList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-movieList__item {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  margin: 0 0 20px 26px;
+}
+
+.c-movieList__item:nth-of-type(4n+1) {
+  margin-left: 0;
+}
+
+.c-movieList__button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: .3;
+}
+
+.c-movieList__button:focus, .c-movieList__button:hover {
+  outline: none;
+  opacity: .5;
+}
+
+.c-movieList__none {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-movieList__image {
+  height: auto;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 57.391304% 0 0;
+}
+
+.c-movieList__image--grayButton::before, .c-movieList__image--grayButton::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.c-movieList__image--grayButton::before {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  z-index: 1;
+}
+
+.c-movieList__image--grayButton::after {
+  border-style: solid;
+  border-width: 12.5px 0 12.5px 20px;
+  border-color: transparent transparent transparent #FFF;
+  border-radius: 3px;
+  height: 0;
+  transform: translate(2px, 2px);
+  width: 0;
+  z-index: 2;
+}
+
+.c-movieList__image img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c-movieList__text {
+  display: block;
+  font-size: 16px;
+  margin: auto 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.c-sptv {
+  text-align: center;
+}
+
+.c-sptv-link {
+  display: inline-block;
+}
+
+#contents-inner {
+  width: 100%;
+  background: #FFF;
+}
+
+div#contWarp {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+div#main {
+  padding: 0;
+}
+
+.l-pageHeader {
+  background-image: none;
+  padding: 0;
+}
+
+.c-pageHeader {
+  background-image: url(/img/special/camp-report2026/bg01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+}
+
+.c-pageHeader-gallery {
+  padding-top: 27px;
+  img {
+    width: 100%;
+  }
+}
+
+.c-pageHeader__title {
+  margin: 0;
+}
+
+.c-pageHeader__information {
+  color: #FFF;
+  font-size: 30px;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  text-shadow: 4px 4px 4px black;
+}
+
+.c-pageHeader__information::before, .c-pageHeader__information::after {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.c-pageHeader__text {
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 4px black;
+}
+
+.c-pageHeader__lead {
+  padding: 0;
+}
+
+.m-button a {
+  font-size: 24px;
+  padding: 18px 22px 18px 0;
+  width: 374px;
+}
+
+.c-pageHeader-bottom {
+  background: #333;
+  padding-bottom: 30px;
+}
+
+.c-pageHeader-bottom__image {
+  img {
+    width: 100%;
+  }
+}
+
+.c-pageNavigation {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 0;
+}
+
+.c-pageNavigation__item {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-left: 1px solid #FFF;
+}
+
+.c-pageNavigation__item:last-child {
+  border-right: 1px solid #FFF;
+}
+
+.c-pageNavigation__link {
+  color: inherit;
+  padding: 13px 10px 6px;
+  width: 219px;
+}
+
+.c-pageNavigation__link:hover {
+  color: inherit;
+}
+
+.c-pageNavigation__icon {
+  align-items: center;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+}
+
+.c-pageNavigation__icon img {
+  margin: 0 auto;
+}
+
+.c-pageNavigation__text {
+  font-size: 18px;
+  margin: 16px 0 0;
+}
+
+.l-pageMain {
+  margin-top: 84px;
+}
+
+.l-pageWrap {
+  max-width: 1018px;
+}
+
+.c-pageMain__lead {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+.c-pageMain__schedule {
+  padding-top: 30px;
+}
+
+.c-common-headline {
+  border: 6px solid #FFF;
+  box-sizing: border-box;
+  font-size: 30px;
+  margin: 0 auto;
+  max-width: 616px;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+}
+
+.c-common-headline::after {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: -42px;
+}
+
+.c-common-headline--contents, .c-common-headline--schedule {
+  border-color: #eff1f4;
+}
+
+.c-common-headline--schedule {
+  color: #c00;
+}
+
+.c-common-headline--schedule::after {
+  background: url(/img/special/camp-report2026/icon01-2.png);
+  height: 67px;
+  width: 73px;
+}
+
+.c-common-headline--guest::after {
+  background: url(/img/special/camp-report2026/icon02-2.png);
+  height: 70px;
+  width: 74px;
+}
+
+.c-common-headline--gift,
+.c-common-headline--campaign {
+  background-color: #ffcb00;
+  color: #FFF;
+
+  &::after {
+    height: 71px;
+    width: 73px;
+    top: -50px;
+  }
+}
+
+.c-common-headline--gift::after {
+  background: url(/img/special/camp-report2026/icon03-3.png);
+}
+
+.c-common-headline--campaign::after {
+  background: url(/img/special/camp-report2026/icon03-2.png);
+}
+
+.c-common-headline--contents::after {
+  background: url(/img/special/camp-report2026/icon04-2.png);
+  height: 69px;
+  left: -38px;
+  top: -48px;
+  width: 74px;
+}
+
+.c-pageMain__banner {
+	margin: 0 auto 60px;
+	width: 320px;
+	text-align: center;
+}
+
+.c-pageMain__banner__link {
+	display: block;
+}
+
+.c-pageMain__catch {
+  align-items: center;
+  padding: 24px 20px;
+  margin-bottom: 98px;
+}
+
+.c-pageMain__catch__body {
+  flex: 1;
+  max-width: 100%;
+  padding: 0 0 0 32px;
+}
+
+.c-pageMain__catch__title {
+  font-size: 30px;
+}
+
+.c-pageMain__catch__text {
+  margin-top: 10px;
+}
+
+.c-pageMain__schedule table {
+  margin: 58px 0 0;
+  table-layout: fixed;
+}
+
+.c-pageMain__schedule table tr.dow td {
+  width: auto;
+  background: #FFF;
+}
+
+.c-pageMain__schedule table td {
+  padding: 5px 8px 24px 8px;
+}
+
+.c-pageMain__schedule table td .date {
+  font-size: 18px;
+}
+
+.c-pageMain__schedule table td span.team {
+  display: block;
+  margin: 0 0 10px;
+  min-height: 21px;
+
+  &:has(+ span.team) {
+    margin-bottom: 0;
+  }
+}
+
+.c-pageMain__schedule table td span.cool {
+  color: #999 !important;
+}
+
+.c-pageMain__schedule table td .guest {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 5px 0 0;
+}
+
+.c-pageMain__schedule table td.live-match {
+  background: #ffffc9;
+}
+
+.c-pageMain__schedule table td.empty {
+  background: #fff;
+  .date {
+    color: #CCC;
+  }
+}
+
+.c-pageMain__schedule table div {
+  margin-top: 0;
+  min-height: 186px;
+}
+
+.c-pageMain__schedule table .multitime {
+  font-size: 14px;
+
+  & + .team {
+    margin-top: 10px;
+  }
+}
+
+.l-pageGuest {
+  background: #eff1f4;
+  padding: 110px 0 84px;
+}
+
+.c-pageGuest {
+  margin: 75.5px auto 0;
+  max-width: 1008px;
+  padding: 0 4px;
+}
+
+.c-guestList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin: 0 auto;
+}
+
+.c-guestList + .c-guestList {
+  margin-top: 72px;
+}
+
+.c-guestList__item {
+  height: 126px;
+  position: relative;
+  width: 148px;
+}
+
+.c-guestList__title {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.c-guestList__item--text {
+  align-items: center;
+  background: #CCC;
+  color: #FFF;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-guestList__dialog {
+  &::before,
+  &::after {
+    background-color: #FFF;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 12px;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.c-guestList__image {
+  background-color: #FFF;
+  height: 100%;
+  position: relative;
+  &::before {
+    background-color: gray;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    z-index: 1;
+  }
+
+  &--noicon {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.c-guestList__text {
+  background: rgba(102, 102, 102, 0.5);
+  bottom: 0;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 1.95;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.c-guestList__copy {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+}
+
+.l-pageGift {
+  background-color: #ffdb00;
+  padding: 102px 0;
+}
+
+.c-pageGift {
+  background-color: #ffcc00;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: -44px auto 0;
+  padding: 32px 50px 50px;
+}
+
+.c-pageGift__content {
+	display: flex;
+	margin: 60px auto 0;
+	width: 1000px;
+}
+
+.c-pageGift__image {
+	width: 406px;
+}
+
+.c-pageGift__image img {
+	width: 100%;
+}
+
+.c-pageGift__text {
+  display: flex;
+	flex: 1;
+  flex-direction: column;
+  font-size: 18px;
+	line-height: 1.7;
+	margin: 0 0 0 30px;
+}
+
+.c-pageGift__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.c-pageGift__term {
+	margin-top: 10px;
+}
+
+.c-pageGift__tel {
+}
+
+.c-pageGift__tel a {
+	display: inline-block;
+	font-size: 36px;
+}
+
+.c-pageGift__icon {
+  display: inline;
+  height: 18px;
+  vertical-align: middle;
+  width: 18px;
+}
+
+.c-pageGift__button {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.l-pageProgram {
+  padding: 100px 0 94px;
+}
+
+.c-pageProgram {
+  margin: 86px auto 0;
+  max-width: 1000px;
+  padding: 0 4px;
+}
+
+.l-pageMovie {
+  background: #eff1f4;
+  padding: 98px 0 130px;
+}
+
+.c-pageMovie {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+
+.m-sptvLink__button {
+  right: 10px;
+}
+
+.c-pageMovie-link {
+  color: #5153ff;
+  font-size: 18px;
+  margin: 20px 0 60px;
+  text-align: center;
+}
+
+.c-pageMovie-link a {
+  color: inherit;
+}
+
+.l-pageFooter {
+  margin-top: 135px;
+}
+
+// Path: src/styles/special/camp-report2026.scss
+
+#pkz {
+  max-width: 1200px;
+  p {
+    color: #FFF;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+.l-pageCampaign {
+  background-color: #ffcc00;
+  padding: 100px 0;
+}
+
+.m-button-type1 {
+  background-color: #FFCC00;
+  border-radius: 28px;
+  display: inline-flex;
+  padding: 14px 24px 14px 68px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &::before {
+    background: #000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    left: 8px;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    border-top: solid 3px #FFF;
+    border-right: solid 3px #FFF;
+    transform: rotate(45deg);
+    left: 20px;
+  }
+}
+
+.m-button-type1__text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.m-button-type2 {
+  background-color: #000;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 8px 26px 8px 68px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &::before {
+    background: #FFCC00;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    left: 24px;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    transform: rotate(45deg);
+    left: 32px;
+  }
+}
+
+.m-button-type2__text {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.m-widget-dialog {
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  max-height: unset;
+  max-width: unset;
+  overflow: hidden;
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.m-widget-dialog__title {
+  color: #fff;
+  display: block;
+  font-size: 36px;
+  text-align: center;
+}
+
+.m-widget-dialog__outer {
+  padding-top: 24px;
+  position: relative;
+}
+
+.m-widget-dialog__content {
+  background: #fff;
+  box-sizing: border-box;
+  max-width: 640px;
+  overflow: auto;
+  padding: 30px;
+  max-height: 92vh;
+}
+
+.m-widget-dialog__close {
+  appearance: none;
+  background: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  height: 21px;
+  position: absolute;
+  transition: all ease .3s;
+  right: 0;
+  top: 0;
+  width: 21px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  span {
+    display: block;
+    height: 100%;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: #FFF;
+      content: "";
+      height: 3px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.m-widget-dialog__heading {
+  display: block;
+  font-size: 30px;
+}
+
+.m-widget-dialog__text {
+  font-size: 18px;
+  white-space: pre-wrap;
+}
+
+.un-campaign {
+  background-color: #03dfc8;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: -42px auto 0;
+  padding: 90px 0 80px;
+}
+
+.un-campaign-lead {
+  font-size: 18px;
+  text-align: center;
+}
+
+.un-campaign-heading {
+  display: block;
+  font-size: 30px;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.un-campaign-content {
+  display: flex;
+  gap: 70px;
+  padding: 0 46px 0 91px;
+}
+
+.un-campaign-content__image {
+  align-items: center;
+  display: flex;
+  flex: 3.23;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 323px;
+}
+
+.un-campaign-content__logo {
+  max-width: 306px
+}
+
+.un-campaign-content__detail {
+  flex: 5.73
+}
+
+.un-campaign-content__heading {
+  background-color: #000;
+  border-radius: 13px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.un-campaign-content__note {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.un-campaign-content__noteIcon {
+  color: #CC0000;
+}
+
+.un-campaign-dl {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 14px;
+}
+
+.un-campaign-dl__item {
+  font-size: 18px;
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    line-height: 1.75;
+  }
+}
+
+.un-campaign-map {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+.un-campaign-map__item {
+  text-align: center;
+  width: 270px;
+}
+
+.un-campaign-map__heading {
+  display: block;
+}
+
+.un-campaign-map__button {
+  cursor: pointer;
+  transition: all ease .3s;
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::before {
+    background-color: #000;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    z-index: 1;
+  }
+}
+
+.un-campaign-map__image {
+  position: relative;
+
+  &::before,
+  &::after {
+    background-color: #FFF;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 12px;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.un-campaign-map__lead {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.l-pageBanner {
+  background-color: #eff0f4;
+  padding: 80px 20px 50px;
+}
+
+.m-block-banner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.m-block-banner__text {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.l-pageSponsor {
+  max-width: 1164px;
+  margin: 0 auto;
+  padding: 100px 0 0;
+}
+
+.m-heading-type02 {
+  font-size: 30px;
+  text-align: center;
+
+  span {
+    border: 6px solid #eff1f4;
+    padding: 8px 48px;
+    display: inline-block;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+      content: "";
+      width: calc(100% - 40px);
+      height: 6px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      margin: auto;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      bottom: -6px;
+    }
+  }
+
+}
+
+.un-sponsor {
+  margin: 80px 0 100px;
+  text-align: center;
+}
+
+.un-sponsor-heading {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.un-sponsor-dl {
+  margin-top: 40px;
+
+  dt {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 18px;
+    margin: 10px 0 0;
+  }
+}
+
+.un-sponsor-link {
+  margin: 20px 0 0;
+  a {
+    color: #0066FF;
+    font-size: 18px;
+    &:hover {
+      color: #0066FF;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &::before {
+      background: url(/img/special/camp-report2026/icon-arrow03.png) center no-repeat;
+      content: "";
+      border-radius: 50%;
+      margin: 0 4px 0 0;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.un-sponsor-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.un-sponsor-content__movie {
+  border-radius: 18px;
+  height: 254px;
+  overflow: hidden;
+  width: 452px;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.un-sponsor-content__icon {
+  margin-left: 50px;
+}
+
+.un-sponsor-content__sns {
+  text-align: center;
+  margin-left: 65px;
+}
+
+.un-sponsor-content__snsHeading {
+  font-size: 66px;
+}
+
+.un-sponsor-content__snsText {
+  font-size: 18px;
+  margin: 14px 0 0px;
+}
+
+.m-list-sns {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.m-list-sns__item {
+  border-radius: 17px;
+  box-shadow: 2.57px 3.06px 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 68px;
+  }
+
+  a {
+    box-sizing: border-box;
+    padding: 25px 28px;
+  }
+}
+
+.m-list-article {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.m-list-article__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.m-list-article__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.m-list-article__heading {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.m-list-article__text {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+
+.m-list-article__link {
+  margin-top: auto;
+  padding-top: 45px;
+  text-align: right;
+  a {
+    color: #0066FF;
+    font-size: 16px;
+
+    &:hover {
+      color: #0066FF;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &::before {
+      background: url(/img/special/camp-report2026/icon-arrow03.png) center no-repeat;
+      content: "";
+      border-radius: 50%;
+      margin: 0 4px 0 0;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.js-dialog-open {
+  border: none;
+  cursor: pointer;
+  transition: all ease .3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.sp-only {
+  display: none;
+}

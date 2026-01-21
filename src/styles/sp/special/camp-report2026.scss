@@ -1,0 +1,1275 @@
+@import url("https://sky-a.asahi.co.jp/css/sp/special/camp-report2020.css");
+.special-movie__visual {
+  position: relative;
+  display: block;
+}
+
+.special-movie__visual::before {
+  content: "";
+  background: url(/img/top/top_youtube.png) center top no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 70px;
+  height: 47px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.special-movie__wrapper {
+  appearance: none;
+  background: transparent;
+  border: none;
+}
+
+.special-movie__text {
+  font-size: 18px;
+  line-height: 1.3;
+  display: block;
+  margin: 16px 0 0;
+}
+
+.special-movie-modal-ovarlay,
+.c-movie-modal-ovarlay {
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.special-movie-modal-content,
+.c-movie-modal-content {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: #fff;
+  position: fixed;
+  display: none;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.special-movie-modal-content__close,
+.c-movie-modal-content__close {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.special-movie-modal-content__close::before, .special-movie-modal-content__close::after,
+.c-movie-modal-content__close::before,
+.c-movie-modal-content__close::after {
+  content: "";
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 10px;
+  left: 0;
+}
+
+.special-movie-modal-content__close::before,
+.c-movie-modal-content__close::before {
+  transform: rotate(-45deg);
+}
+
+.special-movie-modal-content__close::after,
+.c-movie-modal-content__close::after {
+  transform: rotate(45deg);
+}
+
+.special-movie-modal-content__inner,
+.c-movie-modal-content__inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.special-movie-modal-content__inner > iframe,
+.c-movie-modal-content__inner > iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-table-usage {
+  margin: 10px 10px 0;
+}
+
+.c-table-usage__live {
+  color: red;
+}
+
+.c-table-usage__video {
+  color: #5153ff;
+}
+
+.c-commonTag {
+  background: #cc0000;
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.c-commonProgram + .c-commonProgram {
+  margin-top: 45px;
+}
+
+.c-commonProgram__title {
+  font-size: calc(38px/2);
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+.c-commonProgram__content {
+  margin: 10px 0 0;
+}
+
+.c-commonProgram__image img {
+  width: 100%;
+}
+
+.c-commonProgram__detail {
+  flex: 1;
+  padding: 10px 10px 0;
+}
+
+.c-commonProgram__name {
+  color: #cc0000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0 14px;
+}
+
+.c-commonProgram__text {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.c-commonProgram__text + .c-commonProgram__text {
+  margin-top: 15px;
+}
+
+.c-commonProgram__dl {
+  display: flex;
+}
+
+.c-commonProgram__dt {
+  white-space: nowrap;
+}
+
+.c-commonProgram__dd {
+  flex: 1;
+}
+
+.c-parenthesis-title {
+  align-items: center;
+  background: inherit;
+  box-sizing: border-box;
+  color: #999;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 54px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+
+.c-parenthesis-title::before, .c-parenthesis-title::after {
+  content: "";
+  position: absolute;
+}
+
+.c-parenthesis-title::before {
+  border: 3px solid #FFF;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.c-parenthesis-title::after {
+  background: inherit;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  width: calc(100% - 30px);
+}
+
+.c-parenthesit-title__text {
+  position: relative;
+  z-index: 1;
+}
+
+.c-movieList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.c-movieList__item {
+  display: flex;
+  flex-direction: column;
+  width: 48.75%;
+  margin: 0 0 16px;
+}
+
+.c-movieList__button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: .3;
+}
+
+.c-movieList__button:focus, .c-movieList__button:hover {
+  outline: none;
+  opacity: .5;
+}
+
+.c-movieList__none {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-movieList__image {
+  height: auto;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 56.25% 0 0;
+}
+
+.c-movieList__image--grayButton::before, .c-movieList__image--grayButton::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.c-movieList__image--grayButton::before {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  z-index: 1;
+}
+
+.c-movieList__image--grayButton::after {
+  border-style: solid;
+  border-width: 12.5px 0 12.5px 20px;
+  border-color: transparent transparent transparent #FFF;
+  border-radius: 3px;
+  height: 0;
+  transform: translate(2px, 2px);
+  width: 0;
+  z-index: 2;
+}
+
+.c-movieList__image img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c-movieList__text {
+  display: block;
+  font-size: 13px;
+  margin: auto 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.l-pageHeader {
+  padding: 0;
+  background-image: none;
+}
+
+.c-pageHeader {
+  background-image: url(/img/special/camp-report2026/bg01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 22px 0 18px;
+}
+
+.c-pageHeader__title {
+  margin: 0 auto;
+}
+
+.c-pageHeader__information {
+  color: #FFF;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.c-pageHeader__text {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.c-pageHeader__credit {
+  color: #999;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.c-pageHeader-bottom{
+  background-color: #333;
+  padding-bottom: 20px;
+}
+
+.c-pageNavigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0 0;
+  padding: 0 30px;
+}
+
+.c-pageNavigation__item {
+  border-left: 1px solid #999;
+  box-sizing: border-box;
+  color: #FFF;
+  text-align: center;
+  width: 50%;
+}
+
+.c-pageNavigation__item:nth-of-type(even) {
+  border-right: 1px solid #999;
+}
+
+.c-pageNavigation__link {
+  color: inherit;
+  padding: 13px 10px 6px;
+}
+
+.c-pageNavigation__link:hover {
+  color: inherit;
+}
+
+.c-pageNavigation__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.c-pageNavigation__icon img {
+  margin: 0 auto;
+}
+
+.c-pageMain__lead {
+  background: #FFF;
+  padding: 0;
+}
+
+.c-pageMain__schedule {
+  padding-top: 7.5vw;
+}
+
+.c-pageMain__schedule__wrap {
+  margin: 20px 0 0;
+}
+
+.schedule table td.live-match {
+  background: #ffffc9;
+}
+
+.schedule table td .content {
+  white-space: nowrap;
+  display: inline-flex;
+}
+
+.schedule table td .cool {
+  color: #999;
+}
+
+.schedule table td div {
+  flex: 1;
+  max-width: 100%;
+  padding-right: 5px;
+}
+
+.schedule table td div .guest {
+  font-weight: normal;
+}
+
+.c-pageMain__banner {
+	margin: 0 auto 60px;
+	width: 320px;
+	text-align: center;
+}
+
+.c-pageMain__banner__link {
+	display: block;
+}
+
+.c-pageMain__catch {
+  margin-bottom: 45px;
+}
+
+.c-common-headline {
+  border: 3px solid #FFF;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+}
+
+.c-common-headline::after {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: -21px;
+}
+
+.c-common-headline--contents, .c-common-headline--schedule {
+  border-color: #eff1f4;
+}
+
+.c-common-headline--schedule {
+  color: #c00;
+}
+
+.c-common-headline--schedule::after {
+  background: url(/img/special/camp-report2026/icon01-2.png);
+  background-size: 100%;
+  height: calc(67px/2);
+  width: calc(73px/2);
+}
+
+.c-common-headline--guest::after {
+  background: url(/img/special/camp-report2026/icon02-2.png);
+  background-size: 100%;
+  height: calc(70px/2);
+  width: calc(74px/2);
+}
+
+.c-common-headline--gift,
+.c-common-headline--campaign {
+  background-color: #ffcb00;
+  color: #FFF;
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: calc(71px/2);
+    width: calc(73px/2);
+  }
+}
+
+.c-common-headline--gift::after {
+  background-image: url(/img/special/camp-report2026/icon03-2.png);
+}
+
+.c-common-headline--campaign::after {
+  background-image: url(/img/special/camp-report2026/icon03-3.png);
+}
+
+.c-common-headline--contents::after {
+  background: url(/img/special/camp-report2026/icon04-2.png);
+  background-size: 100%;
+  height: calc(69px/2);
+  width: calc(74px/2);
+}
+
+.l-pageGuest {
+  background: #eff1f4;
+  padding: 40px 0;
+}
+
+.c-pageGuest {
+  margin: 32px auto 0;
+}
+
+.c-guestList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.c-guestList + .c-guestList {
+  margin-top: 36px;
+}
+
+.c-guestList__item {
+  height: 0;
+  position: relative;
+  width: 50%;
+  padding: 42.54386% 0 0;
+}
+
+.c-guestList__title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.c-guestList__item--text {
+  align-items: center;
+  background: #CCC;
+  color: #FFF;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-guestList__dialog {
+  &::before,
+  &::after {
+    background-color: #FFF;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 12px;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.c-guestList__image {
+  background-color: #FFF;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &::before {
+    background-color: gray;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    z-index: 1;
+  }
+
+  &--noicon {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.c-guestList__image img {
+  width: 100%;
+}
+
+.c-guestList__text {
+  background: rgba(102, 102, 102, 0.5);
+  bottom: 0;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 1.95;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.c-guestList__copy {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+}
+
+.l-pageGift {
+  background-color: #ffdb00;
+  padding: 24px 0;
+}
+
+.c-pageGift {
+  background-color: #ffcc00;
+  box-sizing: border-box;
+  margin: -40px auto 0;
+  padding: 32px 0 24px;
+}
+
+.c-pageGift__text {
+}
+
+.c-pageGift__content {
+  margin: 30px auto 0;
+  width: 100%;
+}
+
+.c-pageGift__image {
+  margin-top: 10px;
+}
+
+.c-pageGift__image img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.c-pageGift__text {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 25px 20px 0;
+}
+
+.c-pageGift__title {
+  font-weight: bold;
+}
+
+.c-pageGift__term {
+  margin-top: 1em;
+}
+
+
+.c-pageGift__icon {
+  display: inline;
+  height: 18px;
+  vertical-align: middle;
+  width: 18px;
+}
+
+.c-pageGift__button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.c-pageGift__dl {
+  display: flex;
+}
+
+.c-pageGift__dt {
+  white-space: nowrap;
+}
+
+.c-pageGift__dd {
+  flex: 1;
+}
+
+.l-pageProgram {
+  padding: 40px 0;
+}
+
+.c-pageProgram {
+  margin: 50px 0 0;
+}
+
+.l-pageMovie {
+  background: #eff1f4;
+  padding: 40px 0 20px;
+}
+
+.c-pageMovie-link {
+  color: #5153ff;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.c-pageMovie-link a {
+  color: inherit;
+}
+
+/*# sourceMappingURL=camp-report2026.css.map */
+
+.l-pageCampaign {
+  background-color: #ffcc00;
+  padding: 40px 0;
+}
+
+.m-button-type1 {
+  background-color: #FFCC00;
+  border-radius: 21px;
+  display: inline-flex;
+  padding: 8px 24px 8px 48px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: right ease .3s;
+  }
+
+  &::before {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 8px;
+  }
+
+  &::after {
+    width: 7px;
+    height: 7px;
+    border: 0px;
+    border-top: solid 3px #FFF;
+    border-right: solid 3px #FFF;
+    transform: rotate(45deg);
+    left: 16px;
+  }
+}
+
+.m-button-type1__text {
+  font-size: 15px;
+}
+
+
+.m-button-type2 {
+  background-color: #000;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 8px 26px 8px 68px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &::before {
+    background: #FFCC00;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    left: 24px;
+  }
+
+  &::after {
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    transform: rotate(45deg);
+    left: 30px;
+  }
+}
+
+.m-button-type2__text {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.m-widget-dialog {
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  max-height: unset;
+  max-width: 580px;
+  overflow: hidden;
+  width: calc(100% - 20px);
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.m-widget-dialog__title {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+
+.m-widget-dialog__outer {
+  padding-top: 24px;
+  position: relative;
+}
+
+.m-widget-dialog__content {
+  background: #fff;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 15px;
+  max-height: 92vh;
+}
+
+.m-widget-dialog__close {
+  appearance: none;
+  background: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  height: 21px;
+  position: absolute;
+  transition: all ease .3s;
+  right: 0;
+  top: 0;
+  width: 21px;
+
+  span {
+    display: block;
+    height: 100%;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: #FFF;
+      content: "";
+      height: 3px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.m-widget-dialog__heading {
+  display: block;
+  font-size: 20px;
+}
+
+.m-widget-dialog__text {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.un-campaign {
+  background-color: #03dfc8;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: -30px auto 0;
+  padding: 45px 0 40px;
+}
+
+.un-campaign-lead {
+  font-size: 15px;
+  text-align: center;
+}
+
+.un-campaign-heading {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+
+.un-campaign-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px 10px;
+}
+
+.un-campaign-content__image {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  img {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+.un-campaign-content__heading {
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 7px;
+}
+
+.un-campaign-content__note {
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.un-campaign-content__noteIcon {
+  color: #CC0000;
+}
+
+.un-campaign-dl {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.un-campaign-dl__item {
+  font-size: 14px;
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    line-height: 1.75;
+  }
+}
+
+.un-campaign-map {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.un-campaign-map__item {
+  text-align: center;
+}
+
+.un-campaign-map__heading {
+  display: block;
+}
+
+.un-campaign-map__button {
+  cursor: pointer;
+  transition: all ease .3s;
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::before {
+    background-color: #000;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    z-index: 1;
+  }
+}
+
+.un-campaign-map__image {
+  position: relative;
+
+  &::before,
+  &::after {
+    background-color: #FFF;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 12px;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.un-campaign-map__lead {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.l-pageBanner {
+  background-color: #eff0f4;
+  padding: 20px 10px;
+}
+
+.m-block-banner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.m-block-banner__text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.l-pageSponsor {
+  max-width: 1164px;
+  padding: 40px 10px;
+}
+
+.m-heading-type02 {
+  font-size: 18px;
+  text-align: center;
+
+  span {
+    border: 6px solid #eff1f4;
+    padding: 8px 48px;
+    display: inline-block;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+      content: "";
+      width: calc(100% - 40px);
+      height: 6px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      margin: auto;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      bottom: -6px;
+    }
+  }
+
+}
+
+.un-sponsor {
+  margin: 40px 0 50px;
+  text-align: center;
+}
+
+.un-sponsor-heading {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.un-sponsor-dl {
+  margin-top: 40px;
+
+  dt {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 14px;
+    margin: 10px 0 0;
+    text-align: left;
+  }
+}
+
+.un-sponsor-link {
+  margin: 20px 0 0;
+  a {
+    color: #0066FF;
+    font-size: 14px;
+    &:hover {
+      color: #0066FF;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &::before {
+      background: url(/img/special/camp-report2026/icon-arrow03.png) center no-repeat;
+      background-size: 100%;
+      content: "";
+      border-radius: 50%;
+      margin: 0 4px 0 0;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.un-sponsor-content {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.un-sponsor-content__movie {
+  border-radius: 4px;
+  height: 0;
+  overflow: hidden;
+  padding: 56.25% 0 0;
+  position: relative;
+  width: 100%;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.un-sponsor-content__icon {
+  img {
+    margin: 0 auto;
+    max-width: 120px;
+  }
+}
+
+.un-sponsor-content__sns {
+  text-align: center;
+}
+
+.un-sponsor-content__snsHeading {
+  img {
+    margin: 0 auto;
+    width: 120px;
+  }
+}
+
+.un-sponsor-content__snsText {
+  font-size: 18px;
+  margin: 14px 0 0px;
+}
+
+.m-list-sns {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.m-list-sns__item {
+  border-radius: 17px;
+  box-shadow: 2.57px 3.06px 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 68px;
+  }
+
+  a {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+}
+
+.m-list-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+}
+
+.m-list-article__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.m-list-article__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.m-list-article__heading {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.m-list-article__text {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.m-list-article__link {
+  margin-top: auto;
+  padding-top: 10px;
+  text-align: right;
+  a {
+    color: #0066FF;
+    font-size: 13px;
+
+    &:hover {
+      color: #0066FF;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &::before {
+      background: url(/img/special/camp-report2026/icon-arrow03.png) center no-repeat;
+      background-size: 100%;
+      content: "";
+      border-radius: 50%;
+      margin: 0 4px 0 0;
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.js-dialog-open {
+  border: none;
+  cursor: pointer;
+  transition: all ease .3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}

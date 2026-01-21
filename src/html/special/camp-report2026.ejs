@@ -1,0 +1,382 @@
+---
+layout: layouts/base.ejs
+title: 猛虎キャンプリポート2026｜特集｜スカイＡ｜CS放送のスポーツチャンネル
+stylesheet: /css/special/camp-report2026.css
+script: /js/special/campReport2026.js
+---
+<div class="l-camp-report2020">
+<div class="l-sns">
+<div class="l-sns__wrap">
+<a class="twitter-share-button" data-url="https://sky-a.asahi.co.jp/special/camp-report/" href="https://twitter.com/share">Tweet </a> <script>
+! function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0],
+p = /^http:/.test(d.location) ? 'http' : 'https';
+if (!d.getElementById(id)) {
+js = d.createElement(s);
+js.id = id;
+js.src = p + '://platform.twitter.com/widgets.js';
+fjs.parentNode.insertBefore(js, fjs);
+}
+}(document, 'script', 'twitter-wjs');
+</script></div>
+</div>
+
+<section class="l-pageHeader">
+<%- include('../_includes/contents/module-mv', {device: "pc"}) %>
+</section>
+
+<div class="l-pageMain">
+<div class="l-pageWrap">
+<div class="c-pageMain__lead">
+<p>
+トレーニングの様子を中心に、紅白戦、練習試合はもちろん<br>
+ここでしか聞くことができない選手やコーチへのインタビューもたっぷり！！<br>
+豪華解説陣も勢ぞろい！
+</p>
+</div>
+
+<div class="c-pageMain__schedule schedule" id="js-scroll-01">
+<h3 class="c-common-headline c-common-headline--schedule">2月の放送スケジュール</h3>
+
+<table class="schedule-m schedule-m02">
+<tbody>
+<tr class="dow">
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td class="sat">土</td>
+<td class="sun">日</td>
+</tr>
+<tr>
+<td class="empty"><span class="date">27</span></td>
+<td class="empty"><span class="date">28</span></td>
+<td class="empty"><span class="date">29</span></td>
+<td class="empty"><span class="date">30</span></td>
+<td class="empty"><span class="date">31</span></td>
+<td class="camp sat">
+<span class="date">1</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第1クール</span>
+<span class="team">キャンプイン</span>
+<span class="live">[生]</span><br />
+<span class="multitime">9:00～12:00</span><br>12:00～16:00<br>
+<span class="video">[録]</span><br>
+<span class="multitime">18:00～24:30</span>
+<span class="guest">[解説] 糸井<br />[実況] 北條／寺田</span>
+</div>
+</td>
+<td class="camp sun">
+<span class="date">2</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第1クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 真弓<br />[実況] 寺田／北條</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="camp">
+<span class="date">3</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第1クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 真弓<br />[実況] 寺田／北條</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">4</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第1クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 福本<br />[実況] 北條／寺田</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">5</span>
+<span class="team">休日</span>
+</td>
+<td class="camp">
+<span class="date">6</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第2クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 掛布<br />[実況] 高野／寺田</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">7</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第2クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 掛布<br />[実況] 寺田／高野</span>
+</div>
+</td>
+<td class="camp sat live-match">
+<span class="date">8</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第2クール</span>
+<span class="team">紅白戦</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 矢野<br />[実況] 高野／寺田</span>
+</div>
+</td>
+<td class="camp sun live-match">
+<span class="date">9</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第2クール</span>
+<span class="team">紅白戦</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br>
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 矢野<br />[実況] 平野／山下</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="camp"><span class="date">10</span>
+<span class="team">休日</span>
+</td>
+<td class="camp sun">
+<span class="date">11</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第3クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 福留<br />[実況] 山下／平野</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">12</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第3クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 福留<br />[実況] 平野／山下</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">13</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第3クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 掛布／岡田<br />[実況] 佐藤／伊藤</span>
+</div>
+</td>
+<td class="camp"><span class="date">14</span>
+<span class="team">休日</span>
+</td>
+<td class="camp sat live-match">
+<span class="date">15</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第4クール</span>
+<span class="team">練習試合<br>阪神-楽天<br>（宜野座）</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 緒方<br />[実況] 伊藤／佐藤</span></div>
+</td>
+<td class="camp sun live-match">
+<span class="date">16</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第4クール</span>
+<span class="team">練習試合<br>阪神-広島<br>（宜野座）</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 緒方<br />[実況] 佐藤／高野</span></div>
+</td>
+</tr>
+<tr>
+<td class="camp">
+<span class="date">17</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第4クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 能見<br />[実況] 高野／福井</span></div>
+</td>
+<td class="camp">
+<span class="date">18</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第4クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 能見<br />[実況] 福井／高野</span></div>
+</td>
+<td class="camp"><span class="date">19</span>
+<span class="team">休日</span>
+<span class="multitime">GAMEセレクション(1)<br>紅白戦(2025.2.9第2クール最終日)</span>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+</td>
+<td class="camp">
+<span class="date">20</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第5クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 関本<br />[実況] 高野／福井</span></div>
+</td>
+<td class="camp">
+<span class="date">21</span>
+<span class="content">キャンプ</span>
+<div><span class="team cool">第5クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 関本<br />[実況] 北條／山下</span></div>
+</td>
+<td class="camp sat live-match">
+<span class="date">22</span>
+<div>
+<span class="team cool">第5クール</span>
+<span class="team">ファーム練習試合<br>阪神-ハンファ</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 秋山<br />[実況] 山下／北條</span></div>
+</td>
+<td class="camp sun">
+<span class="date">23</span>
+<div>
+<span class="team cool">第5クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～14:30</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 秋山<br />[実況] 北條／中邨</span></div>
+</td>
+</tr>
+<tr>
+<td class="camp sun live-match">
+<span class="date">24</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第5クール</span>
+<span class="team">練習試合<br>阪神-DeNA<br>（宜野座）</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 下柳<br />[実況] 中邨／山下</span></div>
+</td>
+<td class="camp"><span class="date">25</span>
+<div>
+<span class="team">休日</span>
+<span class="team cool">ファーム打ち上げ</span>
+<span class="multitime">GAMEセレクション(2)<br>練習試合 阪神‐楽天(2025.2.15)</span>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">26</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第6クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 今成<br>[実況] 中邨／佐藤</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">27</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第6クール</span>
+<span class="live">[生]</span><br />
+<span class="multitime">10:00～12:00<br>12:00～16:00</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～22:30</span>
+<span class="guest">[解説] 濱中<br>[実況] 佐藤／福井</span>
+</div>
+</td>
+<td class="camp">
+<span class="date">28</span>
+<span class="content">キャンプ</span>
+<div>
+<span class="team cool">第6クール<br>キャンプ打ち上げ</span>
+<span class="live">[生]</span><br />
+<span class="multitime">9:00～13:30</span><br>
+<span class="video">[録]</span><br />
+<span class="multitime">19:00～23:00</span>
+<span class="guest">[解説] 濱中<br>[実況] 佐藤</span>
+</div>
+</td>
+<td class="empty"><span class="date">1</span></td>
+<td class="empty"><span class="date">2</span></td>
+</tr>
+</tbody>
+</table>
+
+<p class="c-table-usage"><span class="c-table-usage__live">[生]</span>生中継 <span class="c-table-usage__video">[録]</span>録画中継<br />
+※上記放送スケジュールは2月1日現在の内容となります。</p>
+</div>
+</div>
+</div><!-- /.l-pageMain -->
+
+<%- include('../_includes/contents/content-common', {device: "pc"}) %>
+
+<div class="l-pageFooter">
+<div class="c-sptv"><a class="c-sptv-link" href="https://promo.skyperfectv.co.jp/guide/?skya=howto" onclick="ga('send', 'event', 'click', 'camp-report2026_pc');" target="_blank">
+<img alt="スカイA見るならスカパー！ スカイAはスカパー！ CS250ch　加入料0円、月額1,529円（税込）、録画OK　お申込み／お問合せはスカイＡ カスタマーセンター　0570-066-250 年中無休（10:00～20:00）　スカイＡはスカパー！、ケーブルテレビ、ひかりTVでご視聴いただけます。　お申込みはこちら" src="/img/special/camp-report2026/banner-sptv.jpg" /> </a>
+</div>
+</div>
+</div>
+
