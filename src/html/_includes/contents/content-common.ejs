@@ -1,428 +1,288 @@
 <section class="l-pageGuest" id="js-scroll-02">
-<h3 class="c-common-headline c-common-headline--guest">解説・実況者 一覧</h3>
-<div class="c-pageGuest">
-<ul class="c-guestList">
-<li class="c-guestList__item c-guestList__item--text">
-<p class="c-guestList__title">解説</p>
-</li>
-<% for (var i = 0; i < commentator.length; i++) { %>
-<li class="c-guestList__item">
-<% if (commentator[i].text) { %>
-<div class="js-dialog">
-<button class="js-dialog-open c-guestList__dialog">
-<div class="c-guestList__image">
-<img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" width="148" height="125"/>
-<p class="c-guestList__text"><%= commentator[i].name %></p>
-</div>
-</button>
-<dialog class="js-dialog-content m-widget-dialog">
-<div class="m-widget-dialog__outer">
-<button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
-<div class="m-widget-dialog__content">
-<img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" />
-<b class="m-widget-dialog__heading"><%= commentator[i].name %></b>
-<p class="m-widget-dialog__text"><%- commentator[i].text %></p>
-</div>
-</div><!-- /.m-widget-dialog__outer -->
-</dialog>
-</div>
-<% } else { %>
-<div class="c-guestList__image c-guestList__image--noicon">
-<img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" width="148" height="125"/>
-<p class="c-guestList__text"><%= commentator[i].name %></p>
-</div>
-<% } %>
-</li>
-<% } %>
-</ul>
-<ul class="c-guestList">
-<li class="c-guestList__item c-guestList__item--text">
-<p class="c-guestList__title">実況</p>
-</li>
-<% for (var i = 0; i < announcer.length; i++) { %>
-<li class="c-guestList__item">
-<% if (announcer[i].text) { %>
-<div class="js-dialog">
-<button class="js-dialog-open c-guestList__dialog">
-<div class="c-guestList__image">
-<img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" width="148" height="125"/>
-<p class="c-guestList__text"><%= announcer[i].name %></p>
-</div>
-</button>
-<dialog class="js-dialog-content m-widget-dialog">
-<div class="m-widget-dialog__outer">
-<button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
-<div class="m-widget-dialog__content">
-<img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" />
-<b class="m-widget-dialog__heading"><%= announcer[i].name %></b>
-<p class="m-widget-dialog__text"><%- announcer[i].text %></p>
-</div>
-</div><!-- /.m-widget-dialog__outer -->
-</dialog>
-</div>
-<% } else { %>
-<div class="c-guestList__image c-guestList__image--noicon">
-<img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" width="148" height="125"/>
-<p class="c-guestList__text"><%= announcer[i].name %></p>
-</div>
-<% } %>
-</li>
-<% } %>
-</ul>
-</div>
-</section><!-- /.l-pageGuest -->
+  <h3 class="c-common-headline c-common-headline--guest">解説・実況者 一覧</h3>
+  <div class="c-pageGuest">
+    <div class="c-pageGuest__note">
+      ※決まり次第お知らせします。
+    </div>
+  </div>
+</section>
+<!-- /.l-pageGuest -->
 
 <section class="l-pageCampaign">
-<h3 class="c-common-headline c-common-headline--campaign">キャンプ地 キャンペーン</h3>
-<div class="un-campaign">
-<p class="un-campaign-lead">阪神タイガース×スカイＡ <br class="sp-only">春季キャンプ限定トートバッグをプレゼント!!</p>
-<b class="un-campaign-heading">阪神タイガース×スカイＡ <br class="sp-only">Spring Camp宜野座・うるま（具志川）<br>デジタルスタンプラリー2025</b>
-<div class="un-campaign-content">
-<div class="un-campaign-content__image">
-<img src="/img/special/camp-report2026/logo01.png" alt="" class="un-campaign-content__logo">
-<img src="/img/special/camp-report2026/product01.png" alt="" class="un-campaign-content__product">
-</div>
-<div class="un-campaign-content__detail">
-<b class="un-campaign-content__heading">スタンプラリー概要</b>
-<dl class="un-campaign-dl">
-<div class="un-campaign-dl__item">
-<dt>【参加方法】</dt>
-<dd>阪神タイガース春季キャンプの開催場所、宜野座村野球場【エントリー宜野座スタジアム】、うるま市具志川野球場のスカイＡブースにて、スマホでスタンプを集めよう。スタンプを２つ集めて、その場で限定トートバッグをゲット！</dd>
-</div>
-<div class="un-campaign-dl__item">
-<dt>【開催期間】</dt>
-<dd>[宜野座] 2025年2月1日（土）～2月28日（金）<br>[うるま] 2025年2月1日（土）～2月25日（火）<br>※休養日除く</dd>
-</div>
-<div class="un-campaign-dl__item">
-<dt>【景品】</dt>
-<dd>阪神タイガース×スカイＡ 春季キャンプ限定トートバッグ<br>※12,000名様限定となります。 無くなり次第終了となりますので予めご了承ください。</dd>
-</div>
-<div class="un-campaign-dl__item">
-<dt>【MAP】</dt>
-<dd>
-<ul class="un-campaign-map">
-<li class="un-campaign-map__item">
-<b class="un-campaign-map__heading">沖縄・宜野座キャンプ</b>
-<div class="js-dialog">
-<button class="js-dialog-open un-campaign-map__button">
-<div class="un-campaign-map__image">
-<img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
-</div>
-</button>
-<dialog class="js-dialog-content m-widget-dialog">
-<div class="m-widget-dialog__head">
-<b class="m-widget-dialog__title">宜野座村野球場<br>【エントリー宜野座スタジアム】</b>
-</div>
-<div class="m-widget-dialog__outer">
-<button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
-<div class="m-widget-dialog__content">
-<img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
-</div>
-</div><!-- /.m-widget-dialog__outer -->
-</dialog>
-</div>
-<p class="un-campaign-map__lead">宜野座村野球場<br>【エントリー宜野座スタジアム】</p>
-</li><!-- /.un-campaign-map__item -->
-<li class="un-campaign-map__item">
-<b class="un-campaign-map__heading">沖縄・うるま（具志川）キャンプ</b>
-<div class="js-dialog">
-<button class="js-dialog-open un-campaign-map__button">
-<div class="un-campaign-map__image">
-<img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
-</div>
-</button>
-<dialog class="js-dialog-content m-widget-dialog">
-<div class="m-widget-dialog__head">
-<b class="m-widget-dialog__title">うるま市具志川野球場</b>
-</div>
-<div class="m-widget-dialog__outer">
-<button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
-<div class="m-widget-dialog__content">
-<img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
-</div>
-</div><!-- /.m-widget-dialog__outer -->
-</dialog>
-</div>
-<p class="un-campaign-map__lead">うるま市具志川野球場</p>
-</li><!-- /.un-campaign-map__item -->
-</ul>
-</dd>
-</div>
-</dl>
-<p class="un-campaign-content__note">※<span class="un-campaign-content__noteIcon">★</span>がスカイAブースの場所ですが変更となる場合がございます。</p>
-</div>
-</div>
-</div><!-- /.un-campaign -->
-</section><!-- /.l-pageCampaign -->
+  <h3 class="c-common-headline c-common-headline--campaign">宜野座＆具志川 イベントブース</h3>
+  <div class="un-campaign">
+    <div class="un-campaign-head">
+      <p class="un-campaign-lead">阪神タイガース×スカイＡ Spring Camp</p>
+      <b class="un-campaign-heading">宜野座＆うるま（具志川）イベントブース2026 キャンペーン</b>
+      <div class="un-campaign-head-sub">
+        <div class="un-campaign-head-sub-term">開催期間 ： 2月1日（日）～キャンプ終了日まで</div>
+        <span class="un-campaign-head-sub-note">※休養日を除く</span>
+      </div>
+    </div>
+    <div class="un-campaign-content">
+      <div class="un-campaign-content__image">
+        <img src="/img/special/camp-report2026/image_spring-camp2026.jpg" alt="" class="un-campaign-content__logo">
+        <a href="https://x.com/skya_baseball" target="_blank" class="un-campaign-content__x">
+          <img src="/img/special/camp-report2026/icon_skya_baseball.png" alt="スカイA 野球部公式X（@skya_baseball）" class="un-campaign-content__product"> スカイA 野球部 公式X
+          <br>（@skya_baseball）
+        </a>
+      </div>
+      <div class="un-campaign-content__detail">
+        <div class="un-campaign-content__detail__heading">
+          <p class="un-campaign-content__detail__heading__place">
+            宜野座村野球場
+            <span>［バイトするならエントリー宜野座スタジアム］</span>
+          </p>
+          <h4 class="un-campaign-content__detail__heading__title">
+            選手たちへエールを贈ろう!<br>
+            「応援メッセージ寄せ書きボード」
+          </h4>
+        </div>
+        <div class="un-campaign-content__detail__body">
+          <div class="un-campaign-content__detail__information is-attention">
+            <img src="/img/special/camp-report2026/image_point.png" alt="">
+            <p>後日抽選で<span class="is-note">「猛虎キャンプリポート」</span>解説陣の
+              <span class="is-note">サイン入りグッズ</span>をプレゼント!</p>
+          </div>
+          <p>宜野座村野球場【バイトするならエントリー宜野座スタジアム】のスカイAイベントブースに「応援メッセージ寄せ書きボード」を設置します。
+            「スカイA野球部公式X」をフォロー＆投稿をお待ちしています。<br>
+            ※詳しくは現地スタッフまでお尋ねください。</p>
+        </div>
+      </div>
+    </div>
+    <div class="un-campaign-content">
+      <div class="un-campaign-content__image">
+        <img src="/img/special/camp-report2026/photo_toto-bag.png" alt="" class="un-campaign-content__logo">
+      </div>
+      <div class="un-campaign-content__detail">
+        <div class="un-campaign-content__detail__heading">
+          <p class="un-campaign-content__detail__heading__place">
+            うるま市具志川野球場
+          </p>
+          <h4 class="un-campaign-content__detail__heading__title">
+            春季キャンプ限定<br>
+            オリジナルトートバッグをゲットしよう!
+          </h4>
+        </div>
+        <div class="un-campaign-content__detail__body">
+          <div class="un-campaign-content__detail__information">
+            <p><span class="is-note"><em>12,000</em>名様</span>にプレゼント!</p>
+          </div>
+        </div>
+        <dl class="un-campaign-dl">
+          <div class="un-campaign-dl__item">
+            <dt>【入手方法】</dt>
+            <dd>うるま市具志川野球場のスカイAイベントブースにて配布いたします。商品は無くなり次第終了となります。<br>
+              ※画像はイメージです。</dd>
+          </div>
+          <div class="un-campaign-dl__item">
+            <dt>【MAP】</dt>
+            <dd>
+              <ul class="un-campaign-map">
+                <li class="un-campaign-map__item">
+                  <b class="un-campaign-map__heading">沖縄・宜野座キャンプ</b>
+                  <div class="js-dialog">
+                    <button class="js-dialog-open un-campaign-map__button">
+                      <div class="un-campaign-map__image">
+                        <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
+                      </div>
+                    </button>
+                    <dialog class="js-dialog-content m-widget-dialog">
+                      <div class="m-widget-dialog__head">
+                        <b class="m-widget-dialog__title">宜野座村野球場<br>【エントリー宜野座スタジアム】</b>
+                      </div>
+                      <div class="m-widget-dialog__outer">
+                        <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
+                        <div class="m-widget-dialog__content">
+                          <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
+                        </div>
+                      </div>
+                      <!-- /.m-widget-dialog__outer -->
+                    </dialog>
+                  </div>
+                  <p class="un-campaign-map__lead">宜野座村野球場
+                    <br>【エントリー宜野座スタジアム】</p>
+                </li>
+                <!-- /.un-campaign-map__item -->
+                <li class="un-campaign-map__item">
+                  <b class="un-campaign-map__heading">沖縄・うるま（具志川）キャンプ</b>
+                  <div class="js-dialog">
+                    <button class="js-dialog-open un-campaign-map__button">
+                      <div class="un-campaign-map__image">
+                        <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
+                      </div>
+                    </button>
+                    <dialog class="js-dialog-content m-widget-dialog">
+                      <div class="m-widget-dialog__head">
+                        <b class="m-widget-dialog__title">うるま市具志川野球場</b>
+                      </div>
+                      <div class="m-widget-dialog__outer">
+                        <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
+                        <div class="m-widget-dialog__content">
+                          <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
+                        </div>
+                      </div>
+                      <!-- /.m-widget-dialog__outer -->
+                    </dialog>
+                  </div>
+                  <p class="un-campaign-map__lead">うるま市具志川野球場</p>
+                </li>
+                <!-- /.un-campaign-map__item -->
+              </ul>
+            </dd>
+          </div>
+        </dl>
+        <p class="un-campaign-content__note">※<span class="un-campaign-content__noteIcon">★</span>がスカイAブースの場所ですが変更となる場合がございます。</p>
+      </div>
+    </div>
+  </div>
+  <!-- /.un-campaign -->
+</section>
+<!-- /.l-pageCampaign -->
 <section class="l-pageGift" id="js-scroll-03">
-<h3 class="c-common-headline c-common-headline--gift">プレゼント情報</h3>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_748"><img alt="【春季キャンプ・第6クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/present_cool6.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title"></h4>
-<p class="c-pageGift__term">「タイヤホイールプレミアム Presents 猛虎キャンプリポート2025」より最終クールの「阪神タイガース選手・コーチ直筆サイン入り春季キャンプグッズ（シャープ産業提供）」を各1名様にプレゼント！<br>
-藤川球児監督・平田勝男二軍監督・百崎蒼生選手・ネルソン投手・ヘルナンデス選手・大山悠輔選手・坂本誠志郎選手<br><br>
-※選手、コーチはお選びできません。<br>
-※予告なく選手が変更となる場合があります。<br><br>
-■7名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月03日(月)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_748" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_747"><img alt="【春季キャンプ・第5クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/present_cool5.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title"></h4>
-<p class="c-pageGift__term">「タイヤホイールプレミアム Presents 猛虎キャンプリポート2025」より第5クールの「阪神タイガース選手・コーチ直筆サイン入り春季キャンプグッズ（シャープ産業提供）」を各1名様にプレゼント！<br>
-工藤泰成投手・才木浩人投手・梅野隆太郎選手・佐藤輝明選手、岩崎優投手、村上頌樹投手<br><br>
-※選手、コーチはお選びできません。<br>
-※予告なく選手が変更となる場合があります。<br><br>
-■6名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_747" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_746"><img alt="【春季キャンプ・第4クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/present_cool4.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title"></h4>
-<p class="c-pageGift__term">「タイヤホイールプレミアム Presents 猛虎キャンプリポート2025」より第4クールの「阪神タイガース選手・コーチ直筆サイン入り春季キャンプグッズ（シャープ産業提供）」を各1名様にプレゼント！<br><br>
-川原陸投手・桐敷拓馬投手・石井大智投手・伊藤将司投手<br><br>
-※選手、コーチはお選びできません。<br>
-※予告なく選手が変更となる場合があります。<br><br>
-■4名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_746" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_744"><img alt="【DID大同工業×掛布雅之 プレゼントキャンペーン】掛布雅之さんサイン入りボールをプレゼント！" src="/img/special/camp-report2026/present_did.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title">【DID大同工業×掛布雅之 プレゼントキャンペーン】掛布雅之さんサイン入りボールをプレゼント！</h4>
-<p class="c-pageGift__term">次のクイズに答えてDIDブランドアンバサダーの掛布雅之さんのサイン入り野球ボールをゲットしよう！<br><br>
-<span style="font-weight: bold; color: red; text-decoration:underline;">Q. 大同工業の本社がある都道府県は？</span><br><br>
-↓答えはこちらから確認してみてください♪<br>
-（リンク先は大同工業のInstagramです）<br>
-<a href="https://www.instagram.com/did_daidokogyo/?locale=ja_JP" target="_blank" style="text-decoration:underline;">https://www.instagram.com/did_daidokogyo/?locale=ja_JP</a><br><br>
-※クイズの回答は<span style="color:red;">「番組のご意見・ご感想」</span>欄にご記入ください。<br><br>
-■3名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_744" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_745"><img alt="【春季キャンプ・第3クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/present_cool3.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title">【春季キャンプ・第3クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！</h4>
-<p class="c-pageGift__term">【春季キャンプ・第3クール】<br>選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！<br><br>
-大竹耕太郎投手、中野拓夢選手、岡留英貴投手の予定<br>
-※選手、コーチはお選びできません。<br>
-※予告なく変更する場合があります<br><br>
-■5名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_745" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_743"><img alt="【春季キャンプ・第2クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/present_cool2.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title">【春季キャンプ・第2クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！</h4>
-<p class="c-pageGift__term">【春季キャンプ・第2クール】<br>選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！<br><br>
-木下里都投手、町田隼乙選手、佐藤蓮投手、小幡竜平選手、森下翔太選手<br>
-※選手、コーチはお選びできません。<br><br>
-■5名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_743" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_742"><img alt="阪神タイガース認定レシピ集「トラめし」をプレゼント！" src="/img/special/camp-report2026/present_torameshi.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title">
-阪神タイガース認定レシピ集「トラめし」を<br>プレゼント！
-</h4>
-<p class="c-pageGift__term">2015年から阪神タイガースの栄養アドバイザーを担当されている公認スポーツ栄養士の吉谷佳代さん。<br>
-虎戦士たちが最高のパフォーマンスを発揮できるよう食環境のサポートを行なってきました。<br>
-そんな吉谷さんが昨年「トラめし」を出版。10名様にプレゼントいたします！<br><br>
-■10名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)正午</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_742" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<div class="c-pageGift">
-<div class="c-pageGift__content">
-<div class="c-pageGift__image"><a href="https://sky-a.asahi.co.jp/present/#anc_741"><img alt="タイガース選手の直筆サイン入りグッズ視聴者プレゼント！" src="/img/special/camp-report2026/present_cool1.jpg" /></a></div>
-<div class="c-pageGift__text">
-<h4 class="c-pageGift__title">
-タイガース選手の直筆サイン入りグッズ<br>視聴者プレゼント！
-</h4>
-<p class="c-pageGift__term">【春季キャンプ・第1クール】<br>
-選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！<br /><br>
-伊原陵人選手、豊田寛選手、前川右京選手、門別啓人選手<br>
-※選手、コーチはお選びできません。<br><br>
-■4名様<br>
-※ご応募はお一人様1回のみでお願い致します。<br>
-※当選者の発表は賞品の発送をもってかえさせて頂きます。<br><br>
-締め切り：2025年03月01日(土)午前00:00</p>
-<div class="c-pageGift__button">
-<a href="https://sky-a.asahi.co.jp/present/#anc_741" class="m-button-type2"><span class="m-button-type2__text">応募フォームへ</span></a>
-</div>
-</div>
-</div>
-</div>
-<!-- /.c-pageGift --->
-</section><!-- /.l-pageGift -->
+  <h3 class="c-common-headline c-common-headline--gift">プレゼント情報</h3>
+  <div class="c-pageGift">
+    <div class="c-pageGift__content">
+      <div class="c-pageGift__image">
+        <a href="https://sky-a.asahi.co.jp/present/#anc_748"><img alt="【春季キャンプ・第6クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/image_present.jpg" /></a>
+      </div>
+      <div class="c-pageGift__text">
+        <h4 class="c-pageGift__title">沖縄でトレーニングに励む猛虎戦士たちの<br class="pc-only">直筆サイン入りグッズなど多数ラインナップ予定！</h4>
+        <p class="c-pageGift__term">プレゼント内容の説明テキスト<br>開始日や応募締め切りなど</p>
+        <div class="c-pageGift__button">
+          <a href="https://sky-a.asahi.co.jp/present/#anc_748" class="m-button-type2"><span class="m-button-type2__text">ご応募はこちら</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.c-pageGift --->
+</section>
+<!-- /.l-pageGift -->
 <section class="l-pageProgram" id="js-scroll-04">
-<h3 class="c-common-headline c-common-headline--contents">オリジナルコンテンツ</h3>
+  <h3 class="c-common-headline c-common-headline--contents">阪神タイガース関連番組</h3>
 
-<div class="c-pageProgram">
-<article class="c-commonProgram">
-<h4 class="c-commonProgram__title">「シン・猛虎中継」</h4>
-<div class="c-commonProgram__content">
-<div class="c-commonProgram__image c-commonProgram__image--large">
-<img alt="「シン・猛虎中継」始動。" src="/img/<%- device === 'sp' ? 'sp/' : '' %>special/camp-report2026/image_program_01.jpg" />
-</div>
-</div>
-</article><!-- /.c-commonProgram -->
+  <div class="c-pageProgram">
+    <article class="c-commonProgram">
+      <h4 class="c-commonProgram__title">「シン・猛虎中継」</h4>
+      <div class="c-commonProgram__content">
+        <div class="c-commonProgram__image c-commonProgram__image--large">
+          <img alt="「シン・猛虎中継」始動。" src="/img/special/camp-report2026/image_program_01.jpg" />
+        </div>
+      </div>
+    </article>
+    <!-- /.c-commonProgram -->
 
-<article class="c-commonProgram">
-<h4 class="c-commonProgram__title">「虎ヲタ」～知ればアナタも人気者～放送中!!</h4>
+    <article class="c-commonProgram">
+      <h4 class="c-commonProgram__title">「虎ヲタ」～知ればアナタも人気者～放送中!!</h4>
+      <div class="c-commonProgram__content">
+        <div class="c-commonProgram__image">
+          <a href="/category/tigers/1000033/"><img alt="知ればアナタも人気者「虎ヲタ」" src="/img/special/camp-report2026/image_program_02.jpg" /></a>
+        </div>
+        <div class="c-commonProgram__detail">
+          <div class="c-commonProgram__name">「虎ヲタ」～知ればアナタも人気者～</div>
+          <p class="c-commonProgram__text">
+            阪神タイガース情報バラエティ「虎ヲタ」！
+            <br> ますだおかだ増田と阪神OB関本賢太郎氏がタイガースにゆかりのあるゲストとマニアックな虎トークをお届け！「知らんかった！」「ホンマかいな？」とツッコミながらごゆるりとお楽しみください。
+          </p>
+          <p class="c-commonProgram__text">
+            出演：増田英彦（ますだおかだ）、関本賢太郎（阪神タイガースOB）
+          </p>
+        </div>
+      </div>
+    </article>
+    <!-- /.c-commonProgram -->
 
-<div class="c-commonProgram__content">
-<div class="c-commonProgram__image"><a href="/category/tigers/1000033/"><img alt="知ればアナタも人気者「虎ヲタ」" src="/img/special/camp-report2026/image_program_02.jpg" /></a></div>
-
-<div class="c-commonProgram__detail">
-
-  <div class="c-commonProgram__name">「虎ヲタ」～知ればアナタも人気者～</div>
-
-<p class="c-commonProgram__text">
-阪神タイガース情報バラエティ「虎ヲタ」！<br>
-ますだおかだ増田と阪神OB関本賢太郎氏がタイガースにゆかりのあるゲストとマニアックな虎トークをお届け！「知らんかった！」「ホンマかいな？」とツッコミながらごゆるりとお楽しみください。
-</p>
-<p class="c-commonProgram__text">
-出演：増田英彦（ますだおかだ）、関本賢太郎（阪神タイガースOB）
-</p>
-<dl class="c-commonProgram__text c-commonProgram__dl">
-<dt class="c-commonProgram__dt">放送日時：</dt>
-<dd class="c-commonProgram__dd">
-2/1(土) 16:30～<br>
-2/10(月) 20:30～<br>
-2/13(木) 16:30～<br>
-2/19(水) 15:00～<br>
-2/19(水) 15:30～<br>
-2/27(木) 16:30～<br>
-2/28(金) 25:00～
-</dd>
-</dl>
-</div>
-</div>
-</article><!-- /.c-commonProgram -->
-</div><!-- /.c-pageProgram -->
-</section><!-- /.l-pageProgram -->
-
-<div class="l-pageBanner">
-<div class="m-block-banner">
-<a href="https://x.com/skya_baseball" target="_blank"><img src="/img/special/camp-report2026/banner01.jpg" alt="今日も明日も春季キャンプ！最新コメント動画配信中!!"></a>
-<p class="m-block-banner__text">待ちに待った新体制阪神タイガース2025春季キャンプを追いかけ、豪華解説陣による今日の猛虎キャンプの振り返り、明日の見どころを連日お届けします。</p>
-</div>
-</div><!-- /.l-pageProgram -->
+    <article class="c-commonProgram">
+      <h4 class="c-commonProgram__title">「トラリンクTV」</h4>
+      <div class="c-commonProgram__content">
+        <div class="c-commonProgram__image">
+          <a href="/category/tigers/1000033/"><img alt="「トラリンクTV」" src="/img/special/camp-report2026/image_program03.jpg" /></a>
+        </div>
+        <div class="c-commonProgram__detail">
+          <div class="c-commonProgram__name">「虎ヲタ」～知ればアナタも人気者～</div>
+          <p class="c-commonProgram__text">元阪神タイガース投手で俳優の嶋尾康史がお届けする野球・タイガーストーク番組</p>
+        </div>
+      </div>
+    </article>
+    <!-- /.c-commonProgram -->
+  </div>
+  <!-- /.c-pageProgram -->
+</section>
+<!-- /.l-pageProgram -->
 
 <section class="l-pageSponsor">
-<h2 class="m-heading-type02"><span>猛虎キャンプリポート2025<br>スポンサーのご紹介</span></h2>
-<div class="un-sponsor">
-<div class="un-sponsor-heading"><a href="https://www.tirewheel-ec.com/" target="_blank"><img src="/img/special/camp-report2026/title02.png"></a></div>
-<dl class="un-sponsor-dl">
-<dt>コハラゴム株式会社</dt>
-<dd>
-コハラゴム株式会社は、1950年に兵庫県神戸市で創業。<br>
-国内外の有名ブランドタイヤを多数扱う通販サイト「タイヤホイールプレミアム」を運営しているタイヤ販売・卸売会社です。<br>
-「タイヤホイールプレミアム」は、完全屋内倉庫保管のタイヤを低価格、即日発送、製造年表記、全国送料無料で<br>
-お客様にお届けしております。
-</dd>
-</dl>
-<div class="un-sponsor-link"><a href="https://www.tirewheel-ec.com/" target="_blank">詳細はこちら</a></div>
-<div class="un-sponsor-content">
-<div class="un-sponsor-content__movie">
-<iframe width="452" height="254" src="https://www.youtube.com/embed/Ri7NqRwjdMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div class="un-sponsor-content__icon"><a href="https://www.tirewheel-ec.com/" target="_blank"><img src="/img/special/camp-report2026/icon-sponsor01.png" alt="TIRE Wheel"></a></div>
-<div class="un-sponsor-content__sns">
-<b class="un-sponsor-content__snsHeading"><img src="/img/special/camp-report2026/text01.png" alt="follow us"></b>
-<p class="un-sponsor-content__snsText">タイヤホイールプレミアム<br>公式SNS</p>
-<ul class="m-list-sns">
-<li class="m-list-sns__item"><a href="https://x.com/TirePremium" target="_blank"><img alt="X" src="/img/special/camp-report2026/icon-sns01.png"></a></li>
-<li class="m-list-sns__item"><a href="https://www.instagram.com/tirewheelpremium_/" target="_blank"><img alt="Instagram" src="/img/special/camp-report2026/icon-sns02.png"></a></li>
-</ul>
-</div>
-</div>
-</div><!-- /.un-sponsor -->
-<ul class="m-list-article">
-<li class="m-list-article__item">
-<div class="m-list-article__image"><a href="https://iki-iki-online.jp/" target="_blank"><img alt="いきいき通販 国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。" src="/img/special/camp-report2026/banner02.jpg" /></a></div>
-<div class="m-list-article__content">
-<b class="m-list-article__heading">株式会社ワンステップ</b>
-<p class="m-list-article__text">いきいき通販は、国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。全国で約5,300施設様にご利用いただいています。荷物は入居者様ごとに小分け梱包、送料は弊社負担。食料品・チルド食品から日用品まで、約5,000アイテムを取り揃えています。</p>
-<div class="m-list-article__link"><a href="https://iki-iki-online.jp/" target="_blank">詳細はこちら</a></div>
-</div>
-</li>
-<li class="m-list-article__item">
-<div class="m-list-article__image"><a href="https://www.inss.jp/" target="_blank"><img alt="インシュアランスサービス" src="/img/special/camp-report2026/banner03.jpg" /></a></div>
-<div class="m-list-article__content">
-<b class="m-list-article__heading">株式会社インシュアランスサービス</b>
-<p class="m-list-article__text">「保険会社の代理人ではなく、お客様の代理人である」を経営理念とし1975年に創業。法人向けリスクマネジメント・コンサルティングを中心に、従来の保険に留まらない幅広いサービスでお客様のリスクに対応しています。</p>
-<div class="m-list-article__link"><a href="https://www.inss.jp/" target="_blank">詳細はこちら</a></div>
-</div>
-</li>
-<li class="m-list-article__item">
-<div class="m-list-article__image"><a href="https://www.did-daido.co.jp/" target="_blank"><img alt="大同工業株式会社" src="/img/special/camp-report2026/banner04.jpg" /></a></div>
-<div class="m-list-article__content">
-<b class="m-list-article__heading">大同工業株式会社</b>
-<p class="m-list-article__text">大同工業は、バイクチェーン製造販売における世界シェアNo１にとどまらず、産業機械、福祉機器等の事業を幅広く展開し、海外11か国に拠点を持つグローバル企業です。<br>
-  高度な技術力と品質管理で、国内外のお客様に信頼される製品を提供しています。</p>
-<div class="m-list-article__link"><a href="https://www.did-daido.co.jp/" target="_blank">詳細はこちら</a></div>
-</div>
-</li>
-</ul>
-</section><!-- /.l-pageSponsor -->
+  <h2 class="m-heading-type02"><span>猛虎キャンプリポート2026<br>スポンサーのご紹介</span></h2>
+  <div class="un-sponsor">
+    <div class="un-sponsor-heading">
+      <a href="https://www.tirewheel-ec.com/" target="_blank"><img src="/img/special/camp-report2026/title02.png"></a>
+    </div>
+    <dl class="un-sponsor-dl">
+      <dt>コハラゴム株式会社</dt>
+      <dd>
+        コハラゴム株式会社は、1950年に兵庫県神戸市で創業。
+        <br> 国内外の有名ブランドタイヤを多数扱う通販サイト「タイヤホイールプレミアム」を運営しているタイヤ販売・卸売会社です。
+        <br> 「タイヤホイールプレミアム」は、完全屋内倉庫保管のタイヤを低価格、即日発送、製造年表記、全国送料無料で
+        <br class="pc-only">お客様にお届けしております。
+        <br> 神戸店、三田店、加古川店の直営３店舗も展開中。
+      </dd>
+    </dl>
+    <div class="un-sponsor-link"><a href="https://www.tirewheel-ec.com/" target="_blank">詳細はこちら</a></div>
+    <div class="un-sponsor-content">
+      <div class="un-sponsor-content__movie">
+        <iframe width="452" height="254" src="https://www.youtube.com/embed/Ri7NqRwjdMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="un-sponsor-content__icon">
+        <a href="https://www.tirewheel-ec.com/" target="_blank"><img src="/img/special/camp-report2026/icon-sponsor01.png" alt="TIRE Wheel"></a>
+      </div>
+      <div class="un-sponsor-content__sns">
+        <b class="un-sponsor-content__snsHeading"><img src="/img/special/camp-report2026/text01.png" alt="follow us"></b>
+        <p class="un-sponsor-content__snsText">タイヤホイールプレミアム
+          <br>公式SNS</p>
+        <ul class="m-list-sns">
+          <li class="m-list-sns__item">
+            <a href="https://x.com/TirePremium" target="_blank"><img alt="X" src="/img/special/camp-report2026/icon-sns01.png"></a>
+          </li>
+          <li class="m-list-sns__item">
+            <a href="https://www.instagram.com/tirewheelpremium_/" target="_blank"><img alt="Instagram" src="/img/special/camp-report2026/icon-sns02.png"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /.un-sponsor -->
+  <ul class="m-list-article">
+    <li class="m-list-article__item">
+      <div class="m-list-article__image">
+        <a href="https://iki-iki-online.jp/" target="_blank"><img alt="いきいき通販 国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。" src="/img/special/camp-report2026/banner02.jpg" /></a>
+      </div>
+      <div class="m-list-article__content">
+        <b class="m-list-article__heading">株式会社ワンステップ</b>
+        <p class="m-list-article__text">いきいき通販は、国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。全国で約5,300施設様にご利用いただいています。荷物は入居者様ごとに小分け梱包、送料は弊社負担。食料品・チルド食品から日用品まで、約5,000アイテムを取り揃えています。</p>
+        <div class="m-list-article__link"><a href="https://iki-iki-online.jp/" target="_blank">詳細はこちら</a></div>
+      </div>
+    </li>
+    <li class="m-list-article__item">
+      <div class="m-list-article__image">
+        <a href="https://www.inss.jp/" target="_blank"><img alt="インシュアランスサービス" src="/img/special/camp-report2026/banner03.jpg" /></a>
+      </div>
+      <div class="m-list-article__content">
+        <b class="m-list-article__heading">株式会社インシュアランスサービス</b>
+        <p class="m-list-article__text">「保険会社の代理人ではなく、お客様の代理人である」を経営理念とし1975年に創業。法人向けリスクマネジメント・コンサルティングを中心に、従来の保険に留まらない幅広いサービスでお客様のリスクに対応しています。</p>
+        <div class="m-list-article__link"><a href="https://www.inss.jp/" target="_blank">詳細はこちら</a></div>
+      </div>
+    </li>
+    <li class="m-list-article__item">
+      <div class="m-list-article__image">
+        <a href="https://www.did-daido.co.jp/" target="_blank"><img alt="大同工業株式会社" src="/img/special/camp-report2026/banner04.jpg" /></a>
+      </div>
+      <div class="m-list-article__content">
+        <b class="m-list-article__heading">大同工業株式会社</b>
+        <p class="m-list-article__text">大同工業は、バイクチェーンで世界トップシェアを誇り、産業機械や福祉機器分野をはじめ幅広い事業を展開。
+          <br> 2026年1月1日、大阪に本社を置く機械メーカー椿本チエインと経営統合し、つばきグループの一員として次の成長ステージへ進みます。
+        </p>
+        <div class="m-list-article__link"><a href="https://www.did-daido.co.jp/" target="_blank">詳細はこちら</a></div>
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- /.l-pageSponsor -->

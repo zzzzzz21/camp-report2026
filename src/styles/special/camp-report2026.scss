@@ -378,7 +378,8 @@ div#main {
   background-image: url(/img/special/camp-report2026/bg01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 40px 0;
+  max-height: 750px;
+  padding: 60px 0 80px;
 }
 
 .c-pageHeader-gallery {
@@ -389,25 +390,24 @@ div#main {
 }
 
 .c-pageHeader__title {
-  margin: 0;
+  margin: 0 0 40px;
 }
 
 .c-pageHeader__information {
   color: #FFF;
-  font-size: 30px;
+  font-size: calc(100 / 16 * 1rem);
   letter-spacing: 0;
   margin-bottom: 0;
-  text-shadow: 4px 4px 4px black;
+//  text-shadow: 4px 4px 4px black;
 }
 
 .c-pageHeader__information::before, .c-pageHeader__information::after {
-  font-size: 40px;
-  font-weight: normal;
+  content: none;
 }
 
 .c-pageHeader__text {
-  margin-bottom: 20px;
-  text-shadow: 4px 4px 4px black;
+  margin-bottom: 40px;
+//  text-shadow: 4px 4px 4px black;
 }
 
 .c-pageHeader__lead {
@@ -421,7 +421,7 @@ div#main {
 }
 
 .c-pageHeader-bottom {
-  background: #333;
+  background: #000;
   padding-bottom: 30px;
 }
 
@@ -532,22 +532,25 @@ div#main {
 
 .c-common-headline--gift,
 .c-common-headline--campaign {
-  background-color: #ffcb00;
-  color: #FFF;
+  background-color: #ffe400;
+  color: #333;
 
   &::after {
-    height: 71px;
-    width: 73px;
-    top: -50px;
   }
 }
 
 .c-common-headline--gift::after {
   background: url(/img/special/camp-report2026/icon03-3.png);
+  height: 71px;
+  width: 73px;
+  top: -50px;
 }
 
 .c-common-headline--campaign::after {
-  background: url(/img/special/camp-report2026/icon03-2.png);
+  background: url(/img/special/camp-report2026/icon05.png);
+  height: 61px;
+  width: 80px;
+  top: -50px;
 }
 
 .c-common-headline--contents::after {
@@ -660,6 +663,11 @@ div#main {
   margin: 75.5px auto 0;
   max-width: 1008px;
   padding: 0 4px;
+  &__note {
+    color: #f00;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .c-guestList {
@@ -759,7 +767,7 @@ div#main {
 }
 
 .c-pageGift {
-  background-color: #ffcc00;
+  background-color: #fff000;
   box-sizing: border-box;
   max-width: 1100px;
   margin: -44px auto 0;
@@ -871,7 +879,7 @@ div#main {
 }
 
 .l-pageCampaign {
-  background-color: #ffcc00;
+//  background-color: #ffcc00;
   padding: 100px 0;
 }
 
@@ -1046,29 +1054,110 @@ div#main {
 }
 
 .un-campaign {
-  background-color: #03dfc8;
+  background-color: #fcf2da;
   box-sizing: border-box;
   max-width: 1100px;
   margin: -42px auto 0;
   padding: 90px 0 80px;
 }
 
+.un-campaign-head {
+  margin: 0 0 40px;
+  text-align: center;
+  &-sub {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin:0 auto;
+    &-term {
+      background-color: #09f;
+      border-radius: 1.6em;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      padding: .2em 1em;
+      margin: .5em;
+      display: block;
+    }
+    &-note {
+      text-align: right;
+    }
+  }
+}
+
 .un-campaign-lead {
-  font-size: 18px;
+  font-size: calc( 24 / 16 * 1rem);
   text-align: center;
 }
 
 .un-campaign-heading {
   display: block;
-  font-size: 30px;
-  margin: 0 0 40px;
+  font-size: calc( 36 / 16 * 1rem);
   text-align: center;
 }
+
+.un-campaign-lead,
+.un-campaign-heading {
+  color: #000;               /* 文字色 */
+  font-weight: 700;
+  display: inline-block;     /* 縁が切れにくい */
+  padding: 0.05em 0.1em;     /* クリップ対策（必要なら調整） */
+
+  /* まずは最も綺麗に出るアウトライン */
+  -webkit-text-stroke: 8px #fff;
+  -webkit-text-fill-color: #000; /* stroke時の塗りを明示 */
+  paint-order: stroke fill;       /* 可能なら縁→塗りの順で描画 */
+}
+
+/* text-stroke が効かない環境（主にFirefox等）へのフォールバック */
+@supports not (-webkit-text-stroke: 1px #fff) {
+  .un-campaign-lead,
+  .un-campaign-heading {
+    /* 8px相当を“密”に埋める（抜け防止） */
+    text-shadow:
+      /* 1 */
+      1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff,
+      1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff,
+      /* 2 */
+      2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      2px 1px 0 #fff, -2px 1px 0 #fff, 2px -1px 0 #fff, -2px -1px 0 #fff,
+      1px 2px 0 #fff, -1px 2px 0 #fff, 1px -2px 0 #fff, -1px -2px 0 #fff,
+      2px 2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, -2px -2px 0 #fff,
+      /* 4 */
+      4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff,
+      4px 2px 0 #fff, -4px 2px 0 #fff, 4px -2px 0 #fff, -4px -2px 0 #fff,
+      2px 4px 0 #fff, -2px 4px 0 #fff, 2px -4px 0 #fff, -2px -4px 0 #fff,
+      4px 4px 0 #fff, -4px 4px 0 #fff, 4px -4px 0 #fff, -4px -4px 0 #fff,
+      /* 6 */
+      6px 0 0 #fff, -6px 0 0 #fff, 0 6px 0 #fff, 0 -6px 0 #fff,
+      6px 3px 0 #fff, -6px 3px 0 #fff, 6px -3px 0 #fff, -6px -3px 0 #fff,
+      3px 6px 0 #fff, -3px 6px 0 #fff, 3px -6px 0 #fff, -3px -6px 0 #fff,
+      6px 6px 0 #fff, -6px 6px 0 #fff, 6px -6px 0 #fff, -6px -6px 0 #fff,
+      /* 8 */
+      8px 0 0 #fff, -8px 0 0 #fff, 0 8px 0 #fff, 0 -8px 0 #fff,
+      8px 4px 0 #fff, -8px 4px 0 #fff, 8px -4px 0 #fff, -8px -4px 0 #fff,
+      4px 8px 0 #fff, -4px 8px 0 #fff, 4px -8px 0 #fff, -4px -8px 0 #fff,
+      8px 8px 0 #fff, -8px 8px 0 #fff, 8px -8px 0 #fff, -8px -8px 0 #fff;
+  }
+}
+
+
+
 
 .un-campaign-content {
   display: flex;
   gap: 70px;
   padding: 0 46px 0 91px;
+  &:nth-child(n+2) {
+    margin-top: 6em;
+  }
+  &__x {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 0 1em;
+  }
 }
 
 .un-campaign-content__image {
@@ -1085,7 +1174,51 @@ div#main {
 }
 
 .un-campaign-content__detail {
-  flex: 5.73
+  flex: 5.73;
+  font-size: 18px;
+  &__heading {
+    margin-bottom: 1em;
+    &__place {
+      background: #f69;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: .5em;
+      padding: .4em 1em;
+      text-align: center;
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+  &__body {}
+  &__information {
+    background: #fff;
+    border: 6px solid #ff0;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2em;
+    padding: .8em 1em .5em;
+    .is-note {
+      color: #f00;
+    }
+    &.is-attention {
+      align-content: center;
+      display: flex;
+      gap: 0 .6em;
+    }
+    em {
+      font-size: 48px;
+      font-style: normal;
+    }
+  }
 }
 
 .un-campaign-content__heading {
