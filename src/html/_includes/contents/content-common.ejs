@@ -1,15 +1,81 @@
 <section class="l-pageGuest" id="js-scroll-02">
   <h3 class="c-common-headline c-common-headline--guest">解説・実況者 一覧</h3>
   <div class="c-pageGuest">
-    <div class="c-pageGuest__note">
-      ※決まり次第お知らせします。
-    </div>
+    <ul class="c-guestList">
+      <li class="c-guestList__item c-guestList__item--text">
+        <p class="c-guestList__title">解説</p>
+      </li>
+      <% for (var i = 0; i < commentator.length; i++) { %>
+      <li class="c-guestList__item">
+        <% if (commentator[i].text) { %>
+        <div class="js-dialog">
+          <button class="js-dialog-open c-guestList__dialog">
+            <div class="c-guestList__image">
+              <img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" width="148" height="125"/>
+              <p class="c-guestList__text"><%= commentator[i].name %></p>
+            </div>
+          </button>
+          <dialog class="js-dialog-content m-widget-dialog">
+            <div class="m-widget-dialog__outer">
+              <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
+              <div class="m-widget-dialog__content">
+                <img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" />
+                <b class="m-widget-dialog__heading"><%= commentator[i].name %></b>
+                <p class="m-widget-dialog__text"><%- commentator[i].text %></p>
+              </div>
+            </div><!-- /.m-widget-dialog__outer -->
+          </dialog>
+        </div>
+        <% } else { %>
+        <div class="c-guestList__image c-guestList__image--noicon">
+          <img alt="<%= commentator[i].name %>" src="/img/special/camp-report2026/<%= commentator[i].image %>" width="148" height="125"/>
+          <p class="c-guestList__text"><%= commentator[i].name %></p>
+        </div>
+        <% } %>
+      </li>
+      <% } %>
+    </ul>
+    <ul class="c-guestList">
+      <li class="c-guestList__item c-guestList__item--text">
+        <p class="c-guestList__title">実況</p>
+      </li>
+      <% for (var i = 0; i < announcer.length; i++) { %>
+      <li class="c-guestList__item">
+        <% if (announcer[i].text) { %>
+        <div class="js-dialog">
+          <button class="js-dialog-open c-guestList__dialog">
+            <div class="c-guestList__image">
+              <img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" width="148" height="125"/>
+              <p class="c-guestList__text"><%= announcer[i].name %></p>
+            </div>
+          </button>
+          <dialog class="js-dialog-content m-widget-dialog">
+            <div class="m-widget-dialog__outer">
+              <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
+              <div class="m-widget-dialog__content">
+                <img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" />
+                <b class="m-widget-dialog__heading"><%= announcer[i].name %></b>
+                <p class="m-widget-dialog__text"><%- announcer[i].text %></p>
+              </div>
+            </div><!-- /.m-widget-dialog__outer -->
+          </dialog>
+        </div>
+        <% } else { %>
+        <div class="c-guestList__image c-guestList__image--noicon">
+          <img alt="<%= announcer[i].name %>" src="/img/special/camp-report2026/<%= announcer[i].image %>" width="148" height="125"/>
+          <p class="c-guestList__text"><%= announcer[i].name %></p>
+        </div>
+        <% } %>
+      </li>
+      <% } %>
+    </ul>
   </div>
 </section>
 <!-- /.l-pageGuest -->
+<!-- /.l-pageGuest -->
 
-<section class="l-pageCampaign">
-  <h3 class="c-common-headline c-common-headline--campaign">宜野座＆具志川 イベントブース</h3>
+<section class="l-pageCampaign" id="js-scroll-campaign">
+  <h3 class="c-common-headline c-common-headline--campaign">宜野座＆うるま イベントブース</h3>
   <div class="un-campaign">
     <div class="un-campaign-head">
       <p class="un-campaign-lead">阪神タイガース×スカイＡ Spring Camp</p>
@@ -40,13 +106,22 @@
         </div>
         <div class="un-campaign-content__detail__body">
           <div class="un-campaign-content__detail__information is-attention">
-            <img src="/img/special/camp-report2026/image_point.png" alt="">
-            <p>後日抽選で<span class="is-note">「猛虎キャンプリポート」</span>解説陣の
-              <span class="is-note">サイン入りグッズ</span>をプレゼント!</p>
+            <p>
+              <img src="/img/special/camp-report2026/image_point.png" alt="" width="66" height="52">
+            </p>
+            <p>寄せ書きにご参加いただき、下記応募条件を満たした方の中から後日抽選で<br>
+			「<span class="is-note">タイヤホイールプレミアム Presents 猛虎キャンプリポート解説陣のサイン入りグッズ</span>」をプレゼント！</p>
           </div>
-          <p>宜野座村野球場【バイトするならエントリー宜野座スタジアム】のスカイAイベントブースに「応援メッセージ寄せ書きボード」を設置します。
-            「スカイA野球部公式X」をフォロー＆投稿をお待ちしています。<br>
-            ※詳しくは現地スタッフまでお尋ねください。</p>
+			<p>「選手へ届け！応援メッセージ寄せ書きX投稿キャンペーン」</p>
+			<p>【プレゼント応募方法】</p>
+            <ul>
+              <li>「応援メッセージ寄せ書きボード」に選手への熱いメッセージを書いて、ご自身のスマートフォンで撮影</li>
+              <li>「<a href="https://x.com/skya_baseball" target="_blank">スカイA野球部公式X</a>」をフォロー （<a href="https://x.com/skya_baseball" target="_blank">https://x.com/skya_baseball</a>）</li>
+              <li>Xに写真とハッシュタグ「#スカイA宜野座ブース」をつけて投稿</li>
+              <li>後日抽選で「タイヤホイールプレミアム Presents 猛虎キャンプリポート解説陣のサイン入りグッズ」をプレゼント</li>
+            </ul>
+            <p>※詳しくは現地スタッフまでお尋ねください。<br>
+              <strong class="is-note">※宜野座ブースでのトートバッグ配布はございません</strong></p>
         </div>
       </div>
     </div>
@@ -66,13 +141,14 @@
         </div>
         <div class="un-campaign-content__detail__body">
           <div class="un-campaign-content__detail__information">
-            <p><span class="is-note"><em>12,000</em>名様</span>にプレゼント!</p>
+            <p><span class="is-note">先着<em>12,000</em>名様</span>にプレゼント!</p>
           </div>
         </div>
         <dl class="un-campaign-dl">
           <div class="un-campaign-dl__item">
             <dt>【入手方法】</dt>
             <dd>うるま市具志川野球場のスカイAイベントブースにて配布いたします。商品は無くなり次第終了となります。<br>
+              <strong class="is-note">※配布は「お一人様1点限り」となります。</strong><br>
               ※画像はイメージです。</dd>
           </div>
           <div class="un-campaign-dl__item">
@@ -84,7 +160,7 @@
                   <div class="js-dialog">
                     <button class="js-dialog-open un-campaign-map__button">
                       <div class="un-campaign-map__image">
-                        <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
+                        <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map_ginoza.png" />
                       </div>
                     </button>
                     <dialog class="js-dialog-content m-widget-dialog">
@@ -94,7 +170,7 @@
                       <div class="m-widget-dialog__outer">
                         <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
                         <div class="m-widget-dialog__content">
-                          <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map01.png" />
+                          <img alt="宜野座村野球場【エントリー宜野座スタジアム】の地図" src="/img/special/camp-report2026/map_ginoza.png" />
                         </div>
                       </div>
                       <!-- /.m-widget-dialog__outer -->
@@ -109,7 +185,7 @@
                   <div class="js-dialog">
                     <button class="js-dialog-open un-campaign-map__button">
                       <div class="un-campaign-map__image">
-                        <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
+                        <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map_uruma.png" />
                       </div>
                     </button>
                     <dialog class="js-dialog-content m-widget-dialog">
@@ -119,7 +195,7 @@
                       <div class="m-widget-dialog__outer">
                         <button class="js-dialog-close m-widget-dialog__close"><span>閉じる</span></button>
                         <div class="m-widget-dialog__content">
-                          <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map02.png" />
+                          <img alt="うるま市具志川野球場の地図" src="/img/special/camp-report2026/map_uruma.png" />
                         </div>
                       </div>
                       <!-- /.m-widget-dialog__outer -->
@@ -144,13 +220,12 @@
   <div class="c-pageGift">
     <div class="c-pageGift__content">
       <div class="c-pageGift__image">
-        <a href="https://sky-a.asahi.co.jp/present/#anc_748"><img alt="【春季キャンプ・第6クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/image_present.jpg" /></a>
+        <a href="https://sky-a.asahi.co.jp/present/"><img alt="【春季キャンプ・第6クール】選手・コーチ直筆サイン入り春季キャンプグッズをプレゼント！" src="/img/special/camp-report2026/image_present.jpg" /></a>
       </div>
       <div class="c-pageGift__text">
         <h4 class="c-pageGift__title">沖縄でトレーニングに励む猛虎戦士たちの<br class="pc-only">直筆サイン入りグッズなど多数ラインナップ予定！</h4>
-        <p class="c-pageGift__term">プレゼント内容の説明テキスト<br>開始日や応募締め切りなど</p>
         <div class="c-pageGift__button">
-          <a href="https://sky-a.asahi.co.jp/present/#anc_748" class="m-button-type2"><span class="m-button-type2__text">ご応募はこちら</span></a>
+          <a href="https://sky-a.asahi.co.jp/present/" class="m-button-type2"><span class="m-button-type2__text">ご応募はこちら</span></a>
         </div>
       </div>
     </div>
@@ -163,7 +238,7 @@
 
   <div class="c-pageProgram">
     <article class="c-commonProgram">
-      <h4 class="c-commonProgram__title">「シン・猛虎中継」</h4>
+      <h4 class="c-commonProgram__title">スカイＡ猛虎中継</h4>
       <div class="c-commonProgram__content">
         <div class="c-commonProgram__image c-commonProgram__image--large">
           <img alt="「シン・猛虎中継」始動。" src="/img/special/camp-report2026/image_program_01.jpg" />
@@ -173,13 +248,12 @@
     <!-- /.c-commonProgram -->
 
     <article class="c-commonProgram">
-      <h4 class="c-commonProgram__title">「虎ヲタ」～知ればアナタも人気者～放送中!!</h4>
+      <h4 class="c-commonProgram__title">「虎ヲタ」～知ればアナタも人気者～</h4>
       <div class="c-commonProgram__content">
         <div class="c-commonProgram__image">
           <a href="/category/tigers/1000033/"><img alt="知ればアナタも人気者「虎ヲタ」" src="/img/special/camp-report2026/image_program_02.jpg" /></a>
         </div>
         <div class="c-commonProgram__detail">
-          <div class="c-commonProgram__name">「虎ヲタ」～知ればアナタも人気者～</div>
           <p class="c-commonProgram__text">
             阪神タイガース情報バラエティ「虎ヲタ」！
             <br> ますだおかだ増田と阪神OB関本賢太郎氏がタイガースにゆかりのあるゲストとマニアックな虎トークをお届け！「知らんかった！」「ホンマかいな？」とツッコミながらごゆるりとお楽しみください。
@@ -199,8 +273,9 @@
           <a href="/category/tigers/1000033/"><img alt="「トラリンクTV」" src="/img/special/camp-report2026/image_program03.jpg" /></a>
         </div>
         <div class="c-commonProgram__detail">
-          <div class="c-commonProgram__name">「虎ヲタ」～知ればアナタも人気者～</div>
-          <p class="c-commonProgram__text">元阪神タイガース投手で俳優の嶋尾康史がお届けする野球・タイガーストーク番組</p>
+          <p class="c-commonProgram__text">元阪神タイガース投手で俳優の嶋尾康史がお届けする、野球・タイガーストーク番組。<br>
+            1970年代後半から90年代を中心にプロ野球界隈の出来事を懐古する。<br>
+            出演：嶋尾康史、とこわか吾郎 ほか</p>
         </div>
       </div>
     </article>
@@ -223,7 +298,7 @@
         <br> 国内外の有名ブランドタイヤを多数扱う通販サイト「タイヤホイールプレミアム」を運営しているタイヤ販売・卸売会社です。
         <br> 「タイヤホイールプレミアム」は、完全屋内倉庫保管のタイヤを低価格、即日発送、製造年表記、全国送料無料で
         <br class="pc-only">お客様にお届けしております。
-        <br> 神戸店、三田店、加古川店の直営３店舗も展開中。
+        <br> 神戸店、三田店、加古川店の直営3店舗も展開中。
       </dd>
     </dl>
     <div class="un-sponsor-link"><a href="https://www.tirewheel-ec.com/" target="_blank">詳細はこちら</a></div>
@@ -257,7 +332,7 @@
       </div>
       <div class="m-list-article__content">
         <b class="m-list-article__heading">株式会社ワンステップ</b>
-        <p class="m-list-article__text">いきいき通販は、国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。全国で約5,300施設様にご利用いただいています。荷物は入居者様ごとに小分け梱包、送料は弊社負担。食料品・チルド食品から日用品まで、約5,000アイテムを取り揃えています。</p>
+        <p class="m-list-article__text">いきいき通販は、国内最大級の福祉施設入居者様の「買い物代行業務支援サービス」です。全国で約6,000施設様にご利用いただいています。荷物は入居者様ごとに小分け梱包、送料は弊社負担。食料品・チルド食品から日用品まで、約5,000アイテムを取り揃えています。</p>
         <div class="m-list-article__link"><a href="https://iki-iki-online.jp/" target="_blank">詳細はこちら</a></div>
       </div>
     </li>

@@ -1,34 +1,16 @@
 [
   {
-    "image": "photo_guest_15.jpg",
-    "name": "北條 瑛祐",
-    "text": ""
-  },
-  {
-    "image": "photo_guest_terada.jpg",
-    "name": "寺田 健人"
-  },
-  {
-    "image": "photo_guest_17.jpg",
-    "name": "高野 純一",
-    "text": ""
-  },
-  {
     "image": "photo_guest_18.jpg",
     "name": "平野 康太郎"
   },
   {
-    "image": "photo_guest_19.jpg",
-    "name": "山下 剛"
-  },
-  {
-    "image": "photo_guest_20.jpg",
-    "name": "佐藤 修平",
+    "image": "photo_guest_21.jpg",
+    "name": "伊藤 史隆",
     "text": ""
   },
   {
-    "image": "photo_guest_21.jpg",
-    "name": "伊藤 史隆",
+    "image": "photo_guest_15.jpg",
+    "name": "北條 瑛祐",
     "text": ""
   },
   {
@@ -37,8 +19,26 @@
     "text": ""
   },
   {
+    "image": "photo_guest_terada.jpg",
+    "name": "寺田 健人"
+  },
+  {
+    "image": "photo_guest_19.jpg",
+    "name": "山下 剛"
+  },
+  {
+    "image": "photo_guest_17.jpg",
+    "name": "高野 純一",
+    "text": ""
+  },
+  {
     "image": "photo_guest_23.jpg",
     "name": "中邨 雄二",
+    "text": ""
+  },
+  {
+    "image": "photo_guest_20.jpg",
+    "name": "佐藤 修平",
     "text": ""
   }
 ]

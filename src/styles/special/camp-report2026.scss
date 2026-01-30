@@ -993,12 +993,16 @@ div#main {
 .m-widget-dialog__content {
   background: #fff;
   box-sizing: border-box;
-  max-width: 640px;
   overflow: auto;
   padding: 30px;
   max-height: 92vh;
 }
 
+@media screen and (min-width: 768px) {
+  .m-widget-dialog__content {
+    max-width: 640px;
+  }
+}
 .m-widget-dialog__close {
   appearance: none;
   background: transparent;
@@ -1197,7 +1201,34 @@ div#main {
       font-size: 28px;
     }
   }
-  &__body {}
+  .is-note {
+    color: #f00;
+  }
+  &__body {
+    a {
+      &:link {
+        color: blue;
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    p:nth-child(n+2) {
+        margin-top: 1em;
+    }
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      padding-inline-start: 40px;
+    }
+    li {
+      list-style: disc;
+      margin-top: .6em;
+    }
+  }
   &__information {
     background: #fff;
     border: 6px solid #ff0;
@@ -1206,9 +1237,6 @@ div#main {
     font-weight: 700;
     margin-bottom: 2em;
     padding: .8em 1em .5em;
-    .is-note {
-      color: #f00;
-    }
     &.is-attention {
       align-content: center;
       display: flex;
